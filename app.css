@@ -149,3 +149,8 @@ nav.tabs{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#fff;borde
 @media(max-width:440px){.wx .wl{display:none}.wx{padding:5px 10px}.brand{font-size:17px}}
 @media(max-width:360px){.wx .e{display:inline}.brand{font-size:15px}}
 .brand .q{margin-left:-8px}
+/* Le menu du bas se place au-dessus des bandeaux fixes injectés par l'hébergeur (ex. CTA Netlify) */
+:root{--cta-offset:0px}
+nav.tabs{bottom:var(--cta-offset);z-index:2147483000;transition:bottom .2s}
+.wrap{padding-bottom:calc(110px + var(--cta-offset))}
+.toast{bottom:calc(90px + var(--cta-offset))}

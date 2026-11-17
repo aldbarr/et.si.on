@@ -83,7 +83,7 @@ Tout se trouve dans `data.js`. Copiez un bloc existant et adaptez-le :
 
 **Ajouter une langue** (par exemple l'italien) : copiez le bloc `fr:{…}` de `i18n.js` en `it:{…}`, créez `data.it.js` (`const TR_IT = {…}`), puis ajoutez `"it"` dans les sélecteurs de langue de `app.js` et le script dans `index.html`.
 
-Après une modification, **augmentez `VERSION` dans `sw.js`** (par exemple `"v3"` devient `"v4"`), pour que les téléphones qui ont installé l'app récupèrent la nouvelle version.
+Après une modification, **augmentez `VERSION` dans `sw.js`** (par exemple `"v4"` devient `"v5"`), pour que les téléphones qui ont installé l'app récupèrent la nouvelle version.
 
 ---
 

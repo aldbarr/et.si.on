@@ -383,3 +383,20 @@ if(S.profile) autoWeather(true);
 if("serviceWorker" in navigator && location.protocol === "https:"){
   window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
 }
+
+// ---------- éviter les bandeaux fixes de l'hébergeur (CTA Netlify, etc.) ----------
+function avoidHostOverlays(){
+  let off = 0; const H = window.innerHeight;
+  for(const el of document.body.querySelectorAll("body > *:not(#app):not(.ov):not(.toast):not(script):not(style), body > iframe")){
+    const cs = getComputedStyle(el);
+    if(!["fixed","sticky"].includes(cs.position) || cs.display === "none" || cs.visibility === "hidden" || +cs.opacity === 0) continue;
+    const r = el.getBoundingClientRect();
+    if(r.height > 0 && r.height < H * 0.4 && r.bottom >= H - 4 && r.top < H) off = Math.max(off, H - r.top);
+    // éléments enfants fixés (le CTA peut être un enfant d'un conteneur)
+    el.querySelectorAll("*").forEach(c => { const s = getComputedStyle(c); if(s.position !== "fixed" || s.display === "none") return; const q = c.getBoundingClientRect(); if(q.height > 0 && q.height < H * 0.4 && q.bottom >= H - 4) off = Math.max(off, H - q.top); });
+  }
+  document.documentElement.style.setProperty("--cta-offset", Math.round(off) + "px");
+}
+new MutationObserver(() => requestAnimationFrame(avoidHostOverlays)).observe(document.body, {childList:true, subtree:false, attributes:true, attributeFilter:["style","class"]});
+window.addEventListener("resize", avoidHostOverlays);
+[300, 1500, 4000].forEach(t => setTimeout(avoidHostOverlays, t));
