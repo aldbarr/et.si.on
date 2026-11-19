@@ -1,5 +1,5 @@
 // Service worker : l'app fonctionne hors ligne. Changer VERSION à chaque mise à jour.
-const VERSION = "v4";
+const VERSION = "v5";
 const SHELL = ["./", "index.html", "app.css", "data.js", "i18n.js", "data.en.js", "data.de.js", "app.js", "manifest.webmanifest", "favicon.svg", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", e => {

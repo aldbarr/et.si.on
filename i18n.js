@@ -48,7 +48,7 @@ fr:{
  locDenied:"Position refusée ou indisponible ici. Essaie avec le nom de ta ville, ou choisis manuellement.", locNA:"Localisation indisponible ici.",
  noFilter:"Aucune idée avec ces filtres", searchingIdea:"Je cherche une idée…", lang:"Langue",
  W:{sun:"Soleil",cloud:"Nuageux",rain:"Pluie",snow:"Neige",hot:"Très chaud",cold:"Froid sec"},
- C:{bricolage:"Bricolage",jeu:"Jeux",cuisine:"Cuisine",nature:"Nature",science:"Science",sport:"Sport",scene:"Musique & scène"},
+ C:{bricolage:"Bricolage",jeu:"Jeux",cuisine:"Cuisine",nature:"Nature",science:"Science",sport:"Sport",scene:"Musique & scène",tresor:"Chasses au trésor"},
  B:{b:"0-2 ans",p:"3-5 ans",e:"6-11 ans",a:"12-18 ans"},
  M:{papier:"Papier",crayons:"Crayons / feutres",peinture:"Peinture",colle:"Colle",ciseaux:"Ciseaux",scotch:"Scotch",carton:"Carton",recup:"Récup (rouleaux, bouteilles)",ficelle:"Ficelle / laine",tissu:"Draps / coussins / tissu",cuisine:"Ingrédients de base",craies:"Craies",ballon:"Ballon",eau:"Bassine / eau"},
  locale:"fr-CH"
@@ -101,7 +101,7 @@ en:{
  locDenied:"Location denied or unavailable here. Try your city name, or pick manually.", locNA:"Location unavailable here.",
  noFilter:"No ideas match these filters", searchingIdea:"Finding an idea…", lang:"Language",
  W:{sun:"Sunny",cloud:"Cloudy",rain:"Rain",snow:"Snow",hot:"Very hot",cold:"Cold & dry"},
- C:{bricolage:"Crafts",jeu:"Games",cuisine:"Cooking",nature:"Nature",science:"Science",sport:"Sport",scene:"Music & stage"},
+ C:{bricolage:"Crafts",jeu:"Games",cuisine:"Cooking",nature:"Nature",science:"Science",sport:"Sport",scene:"Music & stage",tresor:"Treasure hunts"},
  B:{b:"Ages 0-2",p:"Ages 3-5",e:"Ages 6-11",a:"Ages 12-18"},
  M:{papier:"Paper",crayons:"Pencils / markers",peinture:"Paint",colle:"Glue",ciseaux:"Scissors",scotch:"Tape",carton:"Cardboard",recup:"Recycling (tubes, bottles)",ficelle:"String / yarn",tissu:"Sheets / cushions / fabric",cuisine:"Basic ingredients",craies:"Chalk",ballon:"Ball",eau:"Basin / water"},
  locale:"en-GB"
@@ -154,7 +154,7 @@ de:{
  locDenied:"Standort abgelehnt oder hier nicht verfügbar. Versuche es mit deiner Stadt oder wähle manuell.", locNA:"Standort hier nicht verfügbar.",
  noFilter:"Keine Ideen mit diesen Filtern", searchingIdea:"Ich suche eine Idee…", lang:"Sprache",
  W:{sun:"Sonnig",cloud:"Bewölkt",rain:"Regen",snow:"Schnee",hot:"Sehr heiss",cold:"Kalt & trocken"},
- C:{bricolage:"Basteln",jeu:"Spiele",cuisine:"Kochen",nature:"Natur",science:"Wissenschaft",sport:"Sport",scene:"Musik & Bühne"},
+ C:{bricolage:"Basteln",jeu:"Spiele",cuisine:"Kochen",nature:"Natur",science:"Wissenschaft",sport:"Sport",scene:"Musik & Bühne",tresor:"Schatzsuchen"},
  B:{b:"0-2 Jahre",p:"3-5 Jahre",e:"6-11 Jahre",a:"12-18 Jahre"},
  M:{papier:"Papier",crayons:"Stifte",peinture:"Farbe",colle:"Leim",ciseaux:"Schere",scotch:"Klebeband",carton:"Karton",recup:"Recycling (Rollen, Flaschen)",ficelle:"Schnur / Wolle",tissu:"Leintücher / Kissen / Stoff",cuisine:"Grundzutaten",craies:"Kreide",ballon:"Ball",eau:"Becken / Wasser"},
  locale:"de-CH"

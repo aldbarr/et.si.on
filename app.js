@@ -221,7 +221,7 @@ function renderJournal(){
   const cats = new Set(J.map(j => byId(j.act)?.cat).filter(Boolean));
   const out = J.filter(j => byId(j.act)?.w !== "in").length;
   m.innerHTML = `<section class="hero"><h1>${T("jTitle")}</h1><p>${T("jLead")}</p></section>
-  <div class="stats"><div class="stat"><b>${J.length}</b><span>${T("jLived", J.length)}</span></div><div class="stat"><b>${out}</b><span>${T("jOut")}</span></div><div class="stat"><b>${cats.size}/7</b><span>${T("jWorlds")}</span></div></div>
+  <div class="stats"><div class="stat"><b>${J.length}</b><span>${T("jLived", J.length)}</span></div><div class="stat"><b>${out}</b><span>${T("jOut")}</span></div><div class="stat"><b>${cats.size}/${Object.keys(CATS).length}</b><span>${T("jWorlds")}</span></div></div>
   ${J.length ? `<div class="journal">${J.map(j => { const a = byId(j.act) || {t:T("activity"),e:["⭐","",""],cat:"jeu",id:"x",w:"in"}; return `<div class="jc">
     ${j.photo ? `<img class="ph" src="${j.photo}" alt="">` : `<span class="ph">${illus(a)}</span>`}
     <div class="b"><h3>${esc(L(a).t)}</h3><div class="d">${new Date(j.date).toLocaleDateString(T("locale"),{weekday:"long",day:"numeric",month:"long"})}</div>

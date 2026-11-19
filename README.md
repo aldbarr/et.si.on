@@ -5,7 +5,7 @@ Une webapp qui propose aux parents des jeux, bricolages, recettes et sorties **s
 - **Trilingue : français, English, Deutsch.** La langue est détectée automatiquement et peut être changée à tout moment (sélecteur FR/EN/DE)
 - Un questionnaire : enfants, adultes, matériel
 - La météo automatique (position ou ville, via [Open-Meteo](https://open-meteo.com), gratuit, sans clé API) ou choisie à la main
-- 78 activités illustrées, avec des variantes par tranche d'âge
+- 115 activités illustrées (dont 23 expériences scientifiques et 12 chasses au trésor), avec des variantes par tranche d'âge
 - Un bouton « Surprends-moi », des favoris, un historique et un carnet de souvenirs avec photos
 - Une PWA : on peut l'installer sur le téléphone, et elle fonctionne hors ligne
 
@@ -76,14 +76,14 @@ Tout se trouve dans `data.js`. Copiez un bloc existant et adaptez-le :
 ```
 
 - `id` doit être unique (minuscules et tirets).
-- `cat` prend l'une de ces valeurs : `bricolage`, `jeu`, `cuisine`, `nature`, `science`, `sport`, `scene`.
+- `cat` prend l'une de ces valeurs : `bricolage`, `jeu`, `cuisine`, `nature`, `science`, `sport`, `scene`, `tresor`.
 - `e` contient 3 émojis : le premier est l'élément principal de l'illustration, les deux autres sont décoratifs.
 
 **Traductions :** ajoutez la même `id` dans `data.en.js` et `data.de.js` avec `t`, `desc`, `s` (le même nombre d'étapes) et `v`. Si une traduction manque, l'app affiche simplement le texte français.
 
 **Ajouter une langue** (par exemple l'italien) : copiez le bloc `fr:{…}` de `i18n.js` en `it:{…}`, créez `data.it.js` (`const TR_IT = {…}`), puis ajoutez `"it"` dans les sélecteurs de langue de `app.js` et le script dans `index.html`.
 
-Après une modification, **augmentez `VERSION` dans `sw.js`** (par exemple `"v4"` devient `"v5"`), pour que les téléphones qui ont installé l'app récupèrent la nouvelle version.
+Après une modification, **augmentez `VERSION` dans `sw.js`** (par exemple `"v5"` devient `"v6"`), pour que les téléphones qui ont installé l'app récupèrent la nouvelle version.
 
 ---
 
